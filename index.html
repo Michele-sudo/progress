@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="./css/css - Copia.css">
+</head>
+<body>
+    <div class="tabella1" id="menu">
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+            <a href="./index.html"><img src="./img/logo2.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div style="width:100%">
+            <a href ="./chi_sono_responsive.html">CHI SONO</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./i_miei_lavori_responsive.html"> I MIEI LAVORI</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./contatti_responsive.html">CONTATTI</a>
+        </div>
+    </div><br>
+    <br></br>
+
+    <div class="pino">
+        <div class="descrizione">
+            <div class="slider">
+                <div class="slide">
+                    <img src="./img/foto3.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="./img/competenze.png" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="./img/foto6.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="./img/foto4.png" alt="Image 4">
+                </div>
+            </div><br><br>
+            <div class="portfolio">
+                <h1>MY PORTFOLIO</h1>
+                <p><em>Questo documento è stato creato per offrire una visione chiara e dettagliata delle mie capacità tecniche e creative, dimostrando il valore che posso apportare a qualsiasi team o progetto.</em></p>
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+    <footer>
+        <p><em>REALIZZATO DA: MICHELE D'ORAZIO</em></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/micheledorazio/" target="_blank">
+                <img src="./img/instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/michele-d-orazio-512b15214/" target="_blank">
+                <img src="./img/linkedin.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com/michele.dorazio.73" target="_blank">
+                <img src="./img/facebook.jpg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/3401780485" target="_blank">
+                <img src="./img/whatsapp.jpg" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("menu");
+            if (x.className === "tabella1") {
+                x.className += " responsive";
+            } else {
+                x.className = "tabella1";
+            }
+        }
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Cambia immagine ogni 5 secondi
+        }
+    </script>
+</body>
+</html>

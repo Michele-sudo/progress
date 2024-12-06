@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="./css/css - Copia.css">
+    <link rel ="stylesheet" href="./css/lavoro.css">
+</head>
+<body>
+    <div class="tabella1" id="menu">
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+            <a href="./index.html"><img src="./img/logo2.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div style="width:100%">
+            <a  href ="./chi_sono_responsive.html">CHI SONO</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./i_miei_lavori_responsive.html"> I MIEI LAVORI</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./contatti_responsive.html">CONTATTI</a>
+        </div>
+    </div><br>
+    <div class="pino">
+    <div class="titolo"><h1>ESPERIENZE LAVORATIVE</h1></div>
+    
+
+
+    <div class="totale">
+        <div><img src="./allegati/lavoro1.png"></div>
+    <div class="descrizione">
+        <div class="table">
+            <div class="header" onclick="toggleContent('content1')">
+                <h2>DBD BRICO CASA SRL</h2>
+                <h3>IMPIEGATO AMMINISTRATIVO</h3>
+            </div>
+            <div class="content" id="content1">
+                <ol>
+                    <li>emissioni degli ordini tramite ERP e verifica di conferme, fatture, schede prodotto, lotti e listini;</li>
+                    <li>ricevimento degli ordini e inserimento a sistema verificandone le condizioni di acquisto;</li>
+                    <li>analisi, valutazione e selezione dei fornitori mediante monitoraggio prezzi, condizioni di acquisto e tempistiche di trasporto e pagamento;</li>
+                    <li>acquisizione e gestione ordinaria dei documenti di trasporto merci;</li>
+                    <li>fatturazione attiva/passiva ed emissione delle note di debito/credito.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="table">
+            <div class="header" onclick="toggleContent('content2')">
+                <h2>KREDI SRL</h2>
+                <h3>ANALISTA CONTABILE</h3>
+            </div>
+            <div class="content" id="content2">
+                <ol>
+                    <li>elaborazione della documentazione necessaria alla stesura del bilancio d'esercizio;</li>
+                    <li>monitoraggio di pagamenti e incassi, emissione e registrazione di fatture; registrazione fatture attive e passive, prima nota, contabilità ordinaria e semplificata;</li>
+                    <li>osservazione della situazione finanziaria dell'azienda raccogliendo e monitorando dati economici;</li>
+                    <li>creazione di modelli finanziari identificando l'impatto delle variabili aziendali.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="table">
+            <div class="header" onclick="toggleContent('content3')">
+                <h2>DOTT.GAUDIUSO VINCENZO</h2>
+                <h3>TIROCINIO STUDIO COMMERCIALISTA</h3>
+            </div>
+            <div class="content" id="content3">
+                <ol>
+                    <li>contabilità aziendale;</li>
+                    <li>dichiarazioni fiscali;</li>
+                    <li>adempimenti tributari.</li>
+                </ol>
+            </div>
+        </div>
+    </div></div></div><br><br><br>
+
+   
+    <footer>
+        <p><em>REALIZZATO DA: MICHELE D'ORAZIO</em></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/micheledorazio/" target="_blank">
+                <img src="./img/instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/michele-d-orazio-512b15214/" target="_blank">
+                <img src="./img/linkedin.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com/michele.dorazio.73" target="_blank">
+                <img src="./img/facebook.jpg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/3401780485" target="_blank">
+                <img src="./img/whatsapp.jpg" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+    function toggleMenu() {
+        var x = document.getElementById("menu");
+        if (x.className === "tabella1") {
+            x.className += " responsive";
+        } else {
+            x.className = "tabella1";
+        }
+    }
+</script>
+
+
+</body>
+</html>
