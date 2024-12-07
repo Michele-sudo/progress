@@ -202,10 +202,8 @@ footer p {
     .tabella1{
         height:50px
     }
-    .tabella1 img{
-        height:35px;
-        width: 60px
-        
-    }
+   .tabella1 img{
+        margin: 5px 10px 5px;
+   }
     
 }
