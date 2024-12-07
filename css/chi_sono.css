@@ -86,6 +86,17 @@
     .tabella ol{
         width: 300px;
     }
+    .tabella::before{
+        display:none
+    }
+    .giovanni{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } .descrizione p{
+        width: 70%;
+    }
 }
 
 
