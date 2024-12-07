@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="./css/css - Copia.css">  
+    <link rel="stylesheet" href="./css/css_contatti.css">
+</head>
+<body >
+    <div class="tabella1" id="menu">
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+            <a href="./index.html"><img src="./img/logo2.png" alt="Logo"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div style="width:100%">
+            <a  href ="./chi_sono_responsive.html">CHI SONO</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./i_miei_lavori_responsive.html"> I MIEI LAVORI</a>
+        </div>
+        <div style="width:100%">
+            <a  href="./contatti_responsive.html">CONTATTI</a>
+        </div>
+    </div>
+  <div class="pino">
+    <div class="contatti">
+        <div>
+            <h1>CONTATTI</h1>
+        </div>
+        </div><br><br>
+    <div class="form_contatti">
+        <div class="indirizzo">
+            <div><img src="./allegati/contattami.png"></div>
+
+        </div>
+         
+        
+        <div class="form"> <form id = "conctactForm" action="https://formspree.io/f/mdkojvod" method="POST" onsubmit="return validateForm()"> 
+            <label for="nomeCognome">Nome e Cognome:</label> 
+            <input type="text" id="nomeCognome" name="nomeCognome" > 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" > 
+            <label for="oggetto">Oggetto:</label> 
+            <input type="text" id="oggetto" name="oggetto" > 
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" rows="5" ></textarea> 
+            <input type="submit" value="Invia"> 
+        </form>
+    </div></div> <br></br></div>
+        
+
+
+
+    
+    < <footer>
+        <p><em>REALIZZATO DA: MICHELE D'ORAZIO</em></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/micheledorazio/" target="_blank">
+                <img src="./img/instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/michele-d-orazio-512b15214/" target="_blank">
+                <img src="./img/linkedin.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com/michele.dorazio.73" target="_blank">
+                <img src="./img/facebook.jpg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/3401780485" target="_blank">
+                <img src="./img/whatsapp.jpg" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+<script> 
+ 
+function validateForm()  { 
+    var nomeCognome = document.getElementById("nomeCognome").value;
+    var email = document.getElementById("email").value;
+    var oggetto = document.getElementById("oggetto").value
+    var messaggio = document.getElementById("messaggio").value
+    if (nomeCognome.length === 0 || nomeCognome.length > 30) 
+    { alert("Il campo Nome e Cognome è obbligatorio e non deve superare i 30 caratteri."); 
+        return false; } 
+    if (email.length === 0 || email.length > 30 || !email.includes("@")) 
+    { alert("Il campo Email è obbligatorio, deve contenere una chiocciola e non deve superare i 30 caratteri."); 
+        return false; }	
+    if (oggetto.length === 0 || oggetto.length > 20) 
+    { alert("Il campo Oggetto è obbligatorio e non deve superare i 20 caratteri."); 
+        return false; } 
+    if (messaggio.length === 0 || messaggio.length >500)
+    { alert ("il campo Messaggio è obbligatorio e non deve superare i 500 caratteri.")}    
+    alert ("grazie per avermi contattato")
+    return true;   }
+    
+    function toggleMenu() {
+        var x = document.getElementById("menu");
+        if (x.className === "tabella1") {
+            x.className += " responsive";
+        } else {
+            x.className = "tabella1";
+        }
+    }
+
+</script>    
+</body>
+</html>
+
