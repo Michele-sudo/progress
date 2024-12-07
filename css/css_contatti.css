@@ -71,27 +71,40 @@ input[type="submit"]:hover {
 @media screen and (min-width:300px) and (max-width:1200px){
     .form_contatti {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: nowrap;
+        align-items: stretch;
         align-content: center;
-        align-items: center;
+        justify-content: space-evenly;
     }
 
 
 
     .indirizzo{
-        margin:6%;
         width:60%
     }
 
     form{
-        width:400px
-    }
-    .indirizzo {
-        font-size:xx-large
+        width:400px;
+        margin: 0 50px 0 0 
     }
     
+    
+
+    .pino {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contatti{
+        font-size: 30px;
+    }
+
+    .indirizzo img{
+        width:550px;
+    }
+}
 
     .pino {
         display: flex;
