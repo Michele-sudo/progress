@@ -1,0 +1,105 @@
+
+
+.contatti{
+    display: flex;
+   justify-content: center;
+    color: white;
+}
+.contatti h1{
+    color: white;
+}
+.form{
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+    
+}
+
+
+/* Stili per il modulo */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: flex-end;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a04545;
+}
+
+.indirizzo{
+    display: flex;
+    color: white;
+    width:35%;
+    
+}
+
+.form_contatti {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.indirizzo img{
+    border-radius:20px;
+    height:600px;
+
+}
+
+
+
+@media screen and (min-width:300px) and (max-width:1200px){
+    .form_contatti {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+
+
+
+    .indirizzo{
+        margin:6%;
+        width:60%
+    }
+
+    form{
+        width:400px
+    }
+    .indirizzo {
+        font-size:xx-large
+    }
+    
+
+    .pino {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contatti{
+        font-size: 30px;
+    }
+}
