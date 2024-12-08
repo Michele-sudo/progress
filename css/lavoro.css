@@ -79,7 +79,8 @@
 }.titolo h1{
         font-size:x-large}
 } .table{
-    width:85%
+    width:85%;
+    font-size: small;
 }
     
     
