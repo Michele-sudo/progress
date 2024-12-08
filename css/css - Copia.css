@@ -152,6 +152,8 @@ footer p {
 
     .hamburger {
         display: flex;
+        justify-content: center;
+    
     }
 
     .tabella1.responsive {
