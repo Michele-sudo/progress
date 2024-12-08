@@ -94,8 +94,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    } .descrizione p{
-        width: 70%;
+    } .descrizione {
+        width: 118%;
     }
 }
 
