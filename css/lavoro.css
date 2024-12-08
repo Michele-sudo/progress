@@ -59,24 +59,27 @@
         display:flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        align-content: center;
         justify-content: center;
-        align-items: stretch;
     }
     .totale img{
         height: 100%;
-        width:100%;
-        margin: 10% 0;
+        width: 80%;
+        margin: 10% 10%;
     }
     .pino {
     flex: 2;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    align-items: stretch;
 } .descrizione{
         margin:0;
 }.titolo h1{
         font-size:x-large}
+} .table{
+    width:80%
 }
+    
     
