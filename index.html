@@ -43,8 +43,8 @@
             </div><br><br>
             <div class="portfolio">
                 <h1>MY PORTFOLIO</h1>
-                <p><em>Questo documento è stato creato per offrire una visione chiara e dettagliata delle mie capacità tecniche e creative, dimostrando il valore che posso apportare a qualsiasi team o progetto.</em></p>
-            </div>
+                <p><em>Questo documento è stato creato per offrire una visione chiara e dettagliata delle mie capacità tecniche e creative, dimostrando le mie capacità in tema di <span class="typing-effect"></span>.</em></p>
+              </div>
         </div>
     </div><br><br><br><br>
 
@@ -89,6 +89,37 @@
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 5000); // Cambia immagine ogni 5 secondi
         }
+        const words = ["CSS", "HTML", "JavaScript"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 150; // Velocità di scrittura
+    const deletingSpeed = 100; // Velocità di cancellazione
+    const delayBetweenWords = 1000; // Pausa tra parole
+    const targetElement = document.querySelector(".typing-effect");
+
+    function type() {
+      if (charIndex < words[wordIndex].length) {
+        targetElement.textContent += words[wordIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(erase, delayBetweenWords);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        targetElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, deletingSpeed);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length; // Passa alla parola successiva
+        setTimeout(type, typingSpeed);
+      }
+    }
+
+    // Avvia l'effetto di scrittura
+    type();
     </script>
 </body>
 </html>
