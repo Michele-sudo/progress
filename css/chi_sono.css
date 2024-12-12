@@ -97,7 +97,8 @@
     } .descrizione {
         width: 100%;
         word-spacing: -3px;
-    }
+    } .titolo{
+         margin: 0 0 10% 0;}
 }
 
 
