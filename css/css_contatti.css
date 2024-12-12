@@ -93,7 +93,7 @@ input[type="submit"]:hover {
         height: 300px;
         
         width: 300px;
-        margin:10% 0;
+        margin:0 0 10% 0;
     }
     .indirizzo{
         display: flex;
@@ -102,6 +102,7 @@ input[type="submit"]:hover {
 
     .contatti h1{
         font-size: x-large;
+        margin: 10% 0 0 0;
     }
         .form_contatti {
         display: flex;
