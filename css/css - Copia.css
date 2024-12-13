@@ -196,7 +196,7 @@ footer p {
     .portfolio p {
         width: 90%;
         text-align:justify;
-        margin:0;
+        
     }
 
     .social-icons img {
@@ -216,6 +216,8 @@ footer p {
    .tabella1 img{
         margin: 5px 10px 5px;
        height:60px;
+   }.portfolio{
+       margin:0;
    }
     
 }
