@@ -93,7 +93,7 @@ body {
 }
 
 .portfolio p {
-    max-width: 700px;
+    max-width: 710px;
     margin: 0 5%;
     text-align: center;
 }
@@ -196,6 +196,7 @@ footer p {
     .portfolio p {
         width: 90%;
         text-align:justify;
+        margin:0;
     }
 
     .social-icons img {
