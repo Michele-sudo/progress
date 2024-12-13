@@ -218,6 +218,7 @@ footer p {
        height:60px;
    }.portfolio{
        margin:0;
-   }
+   }.tabella1{
+       position:fixed;}
     
 }
