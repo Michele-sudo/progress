@@ -84,6 +84,7 @@ body {
     color: white;
     text-align: justify;
     justify-content: center;
+    align-items:center;
 }
 
 .portfolio h1 {
