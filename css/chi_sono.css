@@ -100,7 +100,9 @@
     } .titolo{
          margin: 5%}
 }
-
+@media screen and (min-width: 300px) and (max-width: 1200px) {
+    .titolo{ margin:3% 0;
+    }
 
 
 
