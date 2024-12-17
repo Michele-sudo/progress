@@ -123,4 +123,9 @@ input[type="submit"]:hover {
         width: 300px
     }
 }
+@media screen and (min-width:728px) and (max-width:1200px){
+    .pino{
+        margin:0
+    }
+}
 
