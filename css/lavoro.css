@@ -85,5 +85,11 @@
     width:85%;
     font-size: small;
 }
+
+@media screen and (min-width:728px) and (max-width:1200px){
+    .pino{
+        margin:0
+    }
+}
     
     
