@@ -36,7 +36,16 @@
         </div>
     <div class="form_contatti">
         <div class="indirizzo">
-            <div><img src="./allegati/contattami.png"></div>
+          <div class="iphone-container">
+            <div class="notch"></div>
+            <div class="chatbot-window">
+              <div class="chatbot-messages" id="chatbotMessages"></div>
+              <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Scrivi un messaggio...">
+                <button id="chatbotSend">Invia</button>
+              </div>
+            </div>
+          </div>
 
         </div>
          
@@ -105,8 +114,114 @@ function validateForm()  {
             x.className = "tabella1";
         }
     }
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+
+    let userName = '';
+    let context = [];
+    let optionsShown = false; // Flag to track if options have been shown
+
+    const addMessage = (text, sender) => {
+      const message = document.createElement('div');
+      message.classList.add('message', sender);
+      message.textContent = text;
+      chatbotMessages.appendChild(message);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      context.push({ text, sender });
+    };
+
+    const clearMessages = () => {
+      chatbotMessages.innerHTML = '';
+    };
+
+    const addOptionButtons = (options) => {
+      options.forEach(option => {
+        const button = document.createElement('button');
+        button.classList.add('option-button');
+        button.textContent = option.text;
+        button.addEventListener('click', () => handleOptionClick(option.value));
+        chatbotMessages.appendChild(button);
+      });
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    };
+
+    const handleSendMessage = () => {
+      const userMessage = chatbotInput.value.trim();
+      if (userMessage) {
+        addMessage(userMessage, 'user');
+        chatbotInput.value = '';
+
+        if (!userName) {
+          userName = userMessage;
+          addMessage(`Piacere di conoscerti, ${userName}! Come posso aiutarti oggi?`, 'bot');
+          showOptions();
+        } else {
+          simulateResponse(userMessage);
+        }
+      }
+    };
+
+    const showOptions = () => {
+      if (!optionsShown) { // Show options only once
+        const options = [
+          { text: 'Qual è la tua mail?', value: 'email' },
+          { text: 'Qual è il tuo numero di telefono?', value: 'phone' },
+          { text: 'Dove abiti?', value: 'address' },
+          { text: 'Come hai creato questo sito?', value: 'creation' },
+          { text: 'Quanto ci hai messo per la realizzazione del sito?', value: 'time' }
+        ];
+        addOptionButtons(options);
+        optionsShown = true; // Set the flag to true to prevent further showing of options
+      }
+    };
+
+    const handleOptionClick = (option) => {
+      switch (option) {
+        case 'email':
+          addMessage('La mia email è micheledorazio22@gmail.com.', 'bot');
+          break;
+        case 'phone':
+          addMessage('Il mio numero di telefono è +39 3401780485', 'bot');
+          break;
+        case 'address':
+          addMessage('Abito a Mola di Bari (BA)', 'bot');
+          break;
+        case 'creation':
+          addMessage('Questo sito è stato creato con HTML, CSS e JavaScript.', 'bot');
+          break;
+        case 'time':
+        addMessage(`Ho dedicato circa un mese alla sua creazione, mettendoci tutto il mio impegno e la mia passione per il web design e lo sviluppo. È stato un viaggio entusiasmante, pieno di sfide e momenti di crescita personale.
+
+        Spero che questo portfolio riesca a trasmettere la mia determinazione e il mio entusiasmo per la programmazione. Ogni dettaglio è stato curato con l'obiettivo di rappresentare al meglio chi sono e cosa posso offrire.
+        
+        Grazie per aver visitato il mio lavoro!`, 'bot');
+        
+          break;
+        default:
+          addMessage('Non ho capito la tua richiesta.', 'bot');
+      }
+      showOptions(); // Keep showing options after each answer, but only once
+    };
+
+    const simulateResponse = (message) => {
+      if (message.toLowerCase().includes('grazie')) {
+        addMessage('Prego! spero di esserti stato di aiuto', 'bot');
+      } else {
+        addMessage('Non ho capito la tua richiesta', 'bot');
+      }
+    };
+
+    chatbotSend.addEventListener('click', handleSendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        handleSendMessage();
+      }
+    });
+
+    addMessage('Ciao! Come ti chiami?', 'bot');
+    
 
 </script>    
 </body>
 </html>
-
